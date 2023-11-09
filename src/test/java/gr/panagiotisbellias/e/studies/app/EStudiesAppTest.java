@@ -1,20 +1,18 @@
-package gr.panagiotisbellias;
+package gr.panagiotisbellias.e.studies.app;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Unit test for E Studies App.
  */
-public class AppTest 
-{
+public class EStudiesAppTest {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
-    {
+    public void shouldAnswerWithTrue() {
         assertTrue( true );
     }
 }
