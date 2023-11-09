@@ -1,10 +1,10 @@
-package gr.panagiotisbellias;
+package gr.panagiotisbellias.e.studies.app;
 
 /**
- * Hello world!
+ * E Studies App
  *
  */
-public class App {
+public class EStudiesApp {
 
     public static void main( String[] args ) {
         System.out.println( "Hello World!" );
