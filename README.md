@@ -29,3 +29,8 @@ java -cp target/e-studies-app-1.0.0.jar \
 3. Commit changes (git commit -m 'Add my feature')
 4. Push branch (git push origin feature/my-feature)
 5. Open a Pull Request
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
+See the [NOTICE](NOTICE) file for details.
