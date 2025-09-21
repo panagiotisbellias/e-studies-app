@@ -1,21 +1,32 @@
-# e-studies-app
+# e-Studies App
 
-Java desktop application for managing study-related tasks.
+A lightweight desktop application to help manage and track your personal studies and learning progress.
 
-## Prerequisites
+## Features
+
+- Track study sessions and progress
+- Export and backup data
+- Generate automated summaries
+
+## Installation
+
+### Prerequisites
 - Java 17+
 - Maven 3.8+
 
-## Build & Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/panagiotisbellias/e-studies-app.git
+   ```
+2. Open the project in your preferred IDE or run the executable (if available).
+   ```bash
+   # Package application
+   mvn clean package
 
-```bash
-# Package application
-mvn clean package
-
-# Run application
-java -cp target/e-studies-app-1.0.0.jar \
-  gr.panagiotisbellias.e.studies.app.EStudiesApp
-```
+   # Run application
+   java -cp target/e-studies-app-1.0.0.jar gr.panagiotisbellias.e.studies.app.EStudiesApp
+   ```
+3. Run the application and follow the on-screen instructions to start managing your studies.
 
 ## Development
 
@@ -23,6 +34,8 @@ java -cp target/e-studies-app-1.0.0.jar \
 - Tests: `src/test/java`
 
 ## Contributing
+
+Found a bug or want to add a feature? Please open an issue or submit a pull request.
 
 1. Fork the repository
 2. Create a feature branch (git checkout -b feature/my-feature)
