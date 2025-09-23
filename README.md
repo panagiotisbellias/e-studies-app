@@ -24,7 +24,7 @@ A lightweight desktop application to help manage and track your personal studies
    mvn clean package
 
    # Run application
-   java -cp target/e-studies-app-1.0.0.jar gr.panagiotisbellias.e.studies.app.EStudiesApp
+   java -cp target/e-studies-app-1.1.0.jar gr.panagiotisbellias.e.studies.app.EStudiesApp
    ```
 3. Run the application and follow the on-screen instructions to start managing your studies.
 
