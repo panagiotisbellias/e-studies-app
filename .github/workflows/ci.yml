@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main, development, task/add-initial-git-hub-actions-ci-build-test-6cvXx98h33vFRMF6 ]
+    branches: [ main, development, task/add-ja-co-co-coverage-6cvXx9FHjJj2gvv6 ]
   pull_request:
     branches: [ main, development ]
 
@@ -32,5 +32,11 @@ jobs:
       - name: Build with Maven
         run: mvn clean package --batch-mode
 
-      - name: Run tests
-        run: mvn test --batch-mode
+      - name: Run tests with coverage
+        run: mvn clean test
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/
