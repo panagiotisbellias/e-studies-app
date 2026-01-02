@@ -11,7 +11,7 @@ A lightweight desktop application to help manage and track your personal studies
 ## Installation
 
 ### Prerequisites
-- Java 17+
+- Java 11+
 - Maven 3.8+
 
 1. Clone the repository:
