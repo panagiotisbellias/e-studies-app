@@ -1,0 +1,31 @@
+# .github/labels.yml
+
+# Standardized labels for issues and pull requests
+
+  - name: bug
+    color: "d73a4a"
+    description: Something is not working
+
+  - name: enhancement
+    color: "a2eeef"
+    description: New feature or request
+
+  - name: documentation
+    color: "0075ca"
+    description: Documentation improvements
+
+  - name: refactor
+    color: "5319e7"
+    description: Code cleanup or refactoring
+
+  - name: security
+    color: "b60205"
+    description: Security-related issues
+
+  - name: question
+    color: "d876e3"
+    description: Further information is requested
+
+  - name: good first issue
+    color: "7057ff"
+    description: Good for newcomers

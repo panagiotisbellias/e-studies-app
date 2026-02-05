@@ -1,0 +1,15 @@
+# CODEOWNERS
+
+# Default code owners
+
+# These users will be requested for review on every PR
+
+* @panagiotisbellias
+
+# Documentation
+
+*.md @panagiotisbellias
+
+# GitHub configuration
+
+.github/ @panagiotisbellias
