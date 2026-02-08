@@ -33,8 +33,15 @@ jobs:
       - name: Generate SBOM
         run: mvn cyclonedx:makeAggregateBom
 
-      - name: Create Git tag
-        run: git tag v${{ github.run_number }} && git push origin --tags
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload release artifact
         uses: actions/upload-artifact@v6
