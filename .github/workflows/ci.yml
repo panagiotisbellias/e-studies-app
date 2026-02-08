@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main, development, task/add-static-analysis-checkstyle-spot-bugs-6cvXxCJGQJMqGjMc ]
+    branches: [ main, development, task/publish-sbom-6cvXxCWHX6w5X2v6 ]
   pull_request:
     branches: [ main, development ]
 
@@ -29,7 +29,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build and verify with Maven
+      - name: Build & generate SBOM
         run: mvn clean verify --batch-mode
 
       - name: Upload coverage report
@@ -37,3 +37,9 @@ jobs:
         with:
           name: jacoco-report
           path: target/site/jacoco/
+
+      - name: Upload SBOM
+        uses: actions/upload-artifact@v6
+        with:
+          name: sbom
+          path: target/bom.*
