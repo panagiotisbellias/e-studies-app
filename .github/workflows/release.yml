@@ -3,6 +3,8 @@ name: Release
 on:
   workflow_dispatch:  # manual trigger
   push:
+    branches:
+      - release-test
     tags:
       - 'v*'           # trigger on semantic version tags like v2.0.0
 
