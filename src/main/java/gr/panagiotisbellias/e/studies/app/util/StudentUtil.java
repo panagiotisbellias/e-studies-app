@@ -42,7 +42,7 @@ public class StudentUtil {
         int userOption;
         while (true) {
             try {
-                userOption = new Scanner(System.in).nextInt();
+                userOption = readInt(new Scanner(System.in));
             } catch (InputMismatchException ex) {
                 System.out.println("Only integer arithmetic positive please. Try again...");
                 continue;
@@ -56,5 +56,9 @@ public class StudentUtil {
 
         return userOption;
 
+    }
+
+    static int readInt(Scanner scanner) {
+        return scanner.nextInt();
     }
 }
