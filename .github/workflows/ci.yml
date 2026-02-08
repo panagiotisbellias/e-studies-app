@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main, development, task/add-ja-co-co-coverage-6cvXx9FHjJj2gvv6 ]
+    branches: [ main, development, task/add-static-analysis-checkstyle-spot-bugs-6cvXxCJGQJMqGjMc ]
   pull_request:
     branches: [ main, development ]
 
@@ -29,11 +29,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build with Maven
-        run: mvn clean package --batch-mode
-
-      - name: Run tests with coverage
-        run: mvn clean test
+      - name: Build and verify with Maven
+        run: mvn clean verify --batch-mode
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v6
