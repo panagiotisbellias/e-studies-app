@@ -4,7 +4,7 @@ on:
   workflow_dispatch:  # manual trigger
   push:
     branches:
-      - release-test
+      - task/formalize-release-workflow-6cvXxCcRF62Wv6X6
     tags:
       - 'v*'           # trigger on semantic version tags like v2.0.0
 
