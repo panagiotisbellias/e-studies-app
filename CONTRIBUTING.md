@@ -9,14 +9,14 @@ We welcome bug reports, feature requests, documentation improvements, and code c
 ## How to Contribute
 
 1. Fork the repository
-2. Create a new branch from `main` or `develop`:
+2. Create a new branch from `main` or `development`:
     ```bash
     git checkout -b feature/my-feature
     ```
 3. Make your changes
 4. Run tests locally:
     ```bash
-    mvn test
+    mvn clean verify
     ```
 5. Commit using clear, conventional messages
 6. Push your branch and open a Pull Request

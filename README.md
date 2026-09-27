@@ -48,7 +48,7 @@ dependencies or cloud services.
 
 ## Tech Stack
 
-* **Java 11+**
+* **Java 21+**
 * **Maven** (build & dependency management)
 * **JUnit** (testing)
 * **GitHub Actions** (CI)
@@ -82,7 +82,7 @@ e-studies-app/
 
 Ensure the following are installed on your system:
 
-* **Java JDK 11 or newer**
+* **Java JDK 21+**
 * **Maven 3.8+**
 * Git (optional, for cloning)
 
