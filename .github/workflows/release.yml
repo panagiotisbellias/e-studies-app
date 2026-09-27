@@ -6,13 +6,21 @@ on:
       version:
         description: 'Release version (e.g. v1.2.0)'
         required: true
+        type: string
   push:
     tags:
       - 'v*'           # trigger on semantic version tags like v2.0.0
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
+
+    env:
+      RELEASE_VERSION: ${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
@@ -22,34 +30,21 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: maven
 
-      - name: Cache Maven packages
-        uses: actions/cache@v6
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
-      - name: Build and test
+      - name: Build and verify
         run: mvn clean verify --batch-mode
 
       - name: Generate SBOM
         run: mvn cyclonedx:makeAggregateBom
 
       - name: Create GitHub Release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ env.RELEASE_VERSION }}
-          release_name: ${{ env.RELEASE_VERSION }}
-          draft: true
-          prerelease: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_VERSION: ${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}
-
-      - name: Upload release artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: release-artifact
-          path: target/*.jar
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "$RELEASE_VERSION" \
+            --title "$RELEASE_VERSION" \
+            --generate-notes \
+            target/*.jar \
+            target/bom.xml \
+            target/bom.json \
