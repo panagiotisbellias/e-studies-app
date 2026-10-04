@@ -1,30 +1,27 @@
-# .github/PULL_REQUEST_TEMPLATE.md
+## Summary
 
-## Description
+Describe what this pull request changes and why.
 
-Please include a summary of the change and the motivation behind it.
+## Changes
 
----
+*
+*
+*
 
-## Type of Change
+## Testing
 
-* [ ] Bug fix
-* [ ] New feature
-* [ ] Refactor
-* [ ] Documentation update
-* [ ] Other
-
----
+* [ ] `mvn clean verify`
+* [ ] Tests added or updated where applicable
+* [ ] Documentation updated where applicable
 
 ## Checklist
 
-* [ ] Code follows project style guidelines
-* [ ] Tests added or updated
-* [ ] Documentation updated if needed
-* [ ] CI checks pass
+* [ ] The changes follow the project's coding conventions
+* [ ] No unnecessary dependencies were added
+* [ ] No sensitive information or credentials were committed
+* [ ] The changes are limited to the scope of this pull request
+* [ ] Related documentation has been updated if needed
 
----
+## Additional Notes
 
-## Related Issues
-
-Closes #
+Add any additional context, screenshots, or information reviewers should know.
