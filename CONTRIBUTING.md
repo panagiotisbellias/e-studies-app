@@ -9,7 +9,7 @@ We welcome bug reports, feature requests, documentation improvements, and code c
 ## How to Contribute
 
 1. Fork the repository
-2. Create a new branch from `main` or `development`:
+2. Create a new branch from `development` for normal feature and maintenance work:
     ```bash
     git checkout -b feature/my-feature
     ```
@@ -20,6 +20,8 @@ We welcome bug reports, feature requests, documentation improvements, and code c
     ```
 5. Commit using clear, conventional messages
 6. Push your branch and open a Pull Request
+
+Pull requests are reviewed by the project maintainer and must pass the required CI checks before merging.
 
 ---
 
