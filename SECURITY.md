@@ -10,10 +10,12 @@ If you discover a security vulnerability, please report it responsibly.
 
 ## Supported Versions
 
+Only the latest stable release is actively supported with security fixes.
+
 | Version | Supported |
 |---------|-----------|
-| Latest  | ✅         |
-| Older   | ❌         |
+| Latest stable | ✅ |
+| Older releases | ❌ |
 
 ---
 

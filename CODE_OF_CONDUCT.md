@@ -36,3 +36,6 @@ unacceptable behavior.
 ## Scope
 
 This Code of Conduct applies within project spaces and in public spaces when representing the project.
+
+For information about project maintainers and the project's decision-making
+process, see [GOVERNANCE.md](GOVERNANCE.md).

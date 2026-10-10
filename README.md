@@ -48,10 +48,14 @@ dependencies or cloud services.
 
 ## Tech Stack
 
-* **Java 21+**
-* **Maven** (build & dependency management)
-* **JUnit** (testing)
-* **GitHub Actions** (CI)
+- Java 21+
+- Maven
+- JUnit 6
+- GitHub Actions
+- Checkstyle
+- SpotBugs
+- JaCoCo
+- CycloneDX SBOM
 
 ---
 
@@ -119,7 +123,7 @@ This produces a runnable JAR under `target/`.
 Run directly using Java:
 
 ```bash
-java -cp target/e-studies-app-2.0.5.jar \
+java -cp target/e-studies-app-<version>.jar \
   gr.panagiotisbellias.e.studies.app.EStudiesApp
 ```
 
@@ -187,7 +191,7 @@ Open the project as a **Maven project**.
 Run unit tests with:
 
 ```bash
-mvn test
+mvn clean verify
 ```
 
 Test sources are located under:
@@ -261,3 +265,14 @@ See:
 * `NOTICE`
 
 for full details.
+
+## Community & Documentation
+
+- [Contributing](CONTRIBUTING.md)
+- [Governance](GOVERNANCE.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Support](SUPPORT.md)
+- [Architecture](ARCHITECTURE.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)

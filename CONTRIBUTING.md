@@ -52,3 +52,20 @@ Feature requests are welcome. Please describe:
 * The problem you are trying to solve
 * Why this feature is useful
 * Any alternatives you considered
+
+## Pull Requests
+
+Before opening a pull request:
+
+1. Ensure the changes are focused and appropriately documented.
+2. Run `mvn clean verify` locally.
+3. Add or update tests where appropriate.
+4. Ensure the project documentation remains consistent with the changes.
+5. Provide a clear pull request description.
+
+Pull requests are reviewed by the project maintainer and must pass the required CI checks before merging.
+
+- [Governance](GOVERNANCE.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Support](SUPPORT.md)

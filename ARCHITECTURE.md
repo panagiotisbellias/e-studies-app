@@ -6,7 +6,7 @@ This document describes the high-level architecture of the **e-studies-app** pro
 
 ## 🧩 Overview
 
-The project is a **Java backend application** built using **Maven**
+The project is a **Java desktop application** built using **Maven**
 and follows a **package-by-feature / layered architecture** approach.
 
 The goals are:
@@ -35,3 +35,13 @@ The project follows the standard Maven layout:
 │           └── gr.panagiotisbellias.e.studies.app
 ├── target/                 # Build output (generated)
 └── pom.xml
+```
+
+## Architectural Principles
+
+- Keep UI concerns separate from business logic.
+- Keep business logic in service classes.
+- Keep domain models focused on application data and behavior.
+- Prefer small, testable components.
+- Avoid unnecessary coupling between layers.
+- Keep persistence and external integrations isolated from core business logic where applicable.

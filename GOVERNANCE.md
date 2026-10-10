@@ -79,3 +79,8 @@ Changes to the maintainer structure will be documented in this file.
 This governance model may evolve as the project and contributor community grow.
 
 Significant changes to governance should be documented through a pull request so that the project history remains transparent.
+
+- [Code owners](CODEOWNERS)
+- [Contributing](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)

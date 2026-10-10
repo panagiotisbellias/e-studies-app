@@ -13,11 +13,20 @@ Dates and priorities may change based on feedback and capacity.
 
 ---
 
+## ✅ Completed
+
+- Repository community health documentation
+- Project governance documentation
+- Contribution and support documentation
+- Release workflow formalization
+- Static analysis with Checkstyle and SpotBugs
+- SBOM generation
+- CI quality gates
+
 ## 🚀 Near-term (Next 1–2 releases)
 
 - Improve test coverage (unit & integration)
 - Stabilize CI pipelines (CodeQL, Dependabot)
-- Documentation improvements (architecture, ADRs, contributing)
 - Refactor legacy or deprecated APIs where applicable
 
 ---
