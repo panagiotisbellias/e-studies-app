@@ -119,7 +119,7 @@ This produces a runnable JAR under `target/`.
 Run directly using Java:
 
 ```bash
-java -cp target/e-studies-app-2.0.4.jar \
+java -cp target/e-studies-app-2.0.5.jar \
   gr.panagiotisbellias.e.studies.app.EStudiesApp
 ```
 
