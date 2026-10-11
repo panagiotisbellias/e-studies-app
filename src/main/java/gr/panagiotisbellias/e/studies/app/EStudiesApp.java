@@ -1,11 +1,9 @@
 package gr.panagiotisbellias.e.studies.app;
 
-import gr.panagiotisbellias.e.studies.app.models.Student;
 import gr.panagiotisbellias.e.studies.app.util.StudentUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Properties;
 import java.util.Scanner;
@@ -45,8 +43,6 @@ public class EStudiesApp {
 
     private static void run() {
 
-        ArrayList<Student> students = new ArrayList<>();
-
         boolean exit = false;
         while(true) {
             System.out.println(getOptions());
@@ -60,6 +56,10 @@ public class EStudiesApp {
                     break;
                 case 5:
                     System.out.println(StudentUtil.getById());
+                    break;
+                default:
+                    System.out.println("This option is not implemented yet. Please try again.");
+                    break;
             }
 
             if (exit) {
