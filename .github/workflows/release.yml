@@ -36,13 +36,20 @@ jobs:
         run: mvn clean verify --batch-mode
 
       - name: Generate SBOM
-        run: mvn cyclonedx:makeAggregateBom
+        run: mvn org.cyclonedx:cyclonedx-maven-plugin:makeAggregateBom --batch-mode
+
+      - name: Verify SBOM files
+        run: |
+          ls -la target/
+          test -s target/bom.xml
+          test -s target/bom.json
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload "$RELEASE_VERSION" \
+            --verify-tag \
             --title "$RELEASE_VERSION" \
             --generate-notes \
             target/*.jar \
