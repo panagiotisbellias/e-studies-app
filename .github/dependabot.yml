@@ -11,6 +11,11 @@ updates:
       - panagiotisbellias
     commit-message:
       prefix: "deps"
+    groups:
+      maven-non-major:
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -20,3 +25,7 @@ updates:
       - panagiotisbellias
     commit-message:
       prefix: "ci"
+    groups:
+      github-actions-updates:
+        patterns:
+          - "*"
